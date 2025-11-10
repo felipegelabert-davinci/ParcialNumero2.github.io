@@ -1,0 +1,357 @@
+body {
+  font-family: 'Oswald', sans-serif;
+  background-color: #1a1a1a; 
+  color: #eee;
+  scroll-behavior: smooth;
+}
+
+.navbar .nav-link {
+  color: #ccc !important;
+  transition: color 0.3s;
+}
+.navbar .nav-link:hover {
+  color: #e63946 !important;
+}
+.navbar {
+  background-color: #000 !important;
+}
+.logo-productora {
+  height: 60px;
+  width: auto;
+  filter: brightness(95%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.navbar-brand:hover .logo-productora {
+  transform: scale(1.1);
+  filter: brightness(120%);
+}
+
+.section-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #e63946;
+  font-weight: 600;
+}
+
+#inicio {
+  background-color: #1a1a1a;
+}
+#inicio img {
+  max-height: 100vh;
+  object-fit: cover;
+  filter: brightness(75%);
+}
+.carousel.carousel-fade .carousel-item {
+  transition: opacity 1.2s ease-in-out;
+}
+
+#historia {
+  background-color: #1a1a1a;
+  color: #eee;
+}
+
+.historia-contenido {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  text-align: justify;
+  position: relative;
+}
+
+.historia-img {
+  float: right; 
+  width: 50%; 
+  max-width: 600px;
+  margin: 0 0 20px 25px;
+  border-radius: 20px;
+  transition: transform 0.4s ease;
+  shape-outside: inset(0 round 20px);
+  clip-path: inset(0 round 20px);
+}
+
+.historia-img:hover {
+  transform: scale(1.03);
+}
+
+.texto-completo {
+  display: inline;
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+}
+
+.texto-completo.d-none {
+  display: none;
+  opacity: 0;
+}
+
+#historia button {
+  display: block;
+  margin: 20px auto 0;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#historia button:hover {
+  background-color: #c12f3b;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .historia-img {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 20px 0;
+    display: block;
+    clip-path: none;
+    shape-outside: none;
+  }
+
+  .historia-contenido {
+    text-align: left;
+  }
+}
+
+#personajes {
+  background-color: #383737;
+}
+
+.card-personaje {
+  background-color: #fff;
+  color: #222;
+  border-radius: 15px;
+  padding: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+}
+
+.card-personaje:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 25px rgba(230, 57, 70, 0.35);
+}
+
+.card-personaje .personaje {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.card-personaje .personaje-img,
+.card-personaje .personaje-img-hover {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: opacity 0.5s ease;
+  border: none; 
+}
+
+.card-personaje .personaje-img-hover {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.card-personaje .personaje:hover .personaje-img-hover {
+  opacity: 1;
+}
+.card-personaje .personaje:hover .personaje-img {
+  opacity: 0;
+}
+
+.nombre-personaje {
+  font-weight: 700;
+  color: #e63946;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.descripcion-personaje {
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+#video {
+  background-color: #1a1a1a;
+}
+
+#contacto {
+  background-color: #7a7a7a !important; 
+  color: #fff;
+}
+#contacto .form-control {
+  background-color: rgba(255,255,255,0.1);
+  border: 1px solid #555;
+  color: #fff;
+}
+#contacto .form-control:focus {
+  border-color: #e63946;
+  box-shadow: 0 0 10px rgba(230,57,70,0.4);
+}
+
+footer {
+  background-color: #000 !important;
+}
+.footer-logos img {
+  width: 28px;
+  margin: 0 8px;
+  filter: brightness(85%);
+  transition: transform 0.3s, filter 0.3s;
+}
+.footer-logos img:hover {
+  transform: scale(1.2);
+  filter: brightness(120%);
+}
+
+@media (max-width: 768px) {
+  .personaje-img, .personaje-img-hover {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+#personajes {
+  background-color: #1a1a1a !important;
+}
+
+.row.g-4.justify-content-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-personaje {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  min-height: 420px; 
+}
+
+.card-personaje .descripcion-personaje {
+  flex-grow: 1; 
+}
+
+@media (max-width: 992px) {
+  #personajes .col-lg-3 {
+    flex: 0 0 45%;
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 576px) {
+  #personajes .col-lg-3 {
+    flex: 0 0 90%;
+    max-width: 90%;
+  }
+  .card-personaje {
+    min-height: auto;
+    padding: 15px;
+  }
+  .card-personaje .personaje-img,
+  .card-personaje .personaje-img-hover {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+.banner-texto {
+  position: absolute;
+  top: 65%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  z-index: 10;
+}
+
+.banner-texto h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+}
+
+.banner-texto h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+}
+
+@media (max-width: 768px) {
+  .banner-texto h1 {
+    font-size: 2.5rem;
+  }
+  .banner-texto h3 {
+    font-size: 1rem;
+  }
+}
+
+.section-title {
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: default;
+}
+
+.section-title:hover {
+  color: #ffffff;
+  transform: scale(1.05);
+  text-shadow: 2px 2px 8px rgba(230,57,70,0.6);
+}
+
+
+@media (max-width: 768px) {
+  #inicio .carousel-item img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover; 
+  }
+
+  .banner-texto {
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 768px) {
+  #contacto .row.mb-3 {
+    row-gap: 10px; 
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  #inicio .carousel-item img {
+    width: 100%;
+    height: 100vh; 
+    object-fit: cover;
+  }
+
+  .banner-texto {
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 993px) {
+  #inicio .carousel-item img {
+    width: 100%;
+    height: 100vh; 
+    object-fit: cover;
+  }
+
+  .banner-texto {
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
